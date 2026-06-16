@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#1A1A2E"/>
+  <rect x="50" y="50" width="500" height="350" fill="#16213E" rx="12"/>
+  <rect x="230" y="160" width="140" height="100" fill="#2A2A50" rx="4"/>
+  <circle cx="260" cy="185" r="15" fill="#3A3A70"/>
+  <polygon points="230,260 310,200 370,260" fill="#2E2E60"/>
+  <text x="300" y="320" text-anchor="middle" font-family="Georgia,serif" font-size="20"
+    fill="#6B6478" font-style="italic">ArtStore</text>
+</svg>

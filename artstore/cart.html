@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — ArtStore</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cart">
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">Art<span>Store</span></a>
+      <div class="nav-actions">
+        <button class="btn-icon" data-theme-toggle title="Toggle dark mode" aria-label="Toggle dark mode">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <a href="cart.html" class="btn-icon" aria-label="Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HEADER ────────────────────────────────────────── -->
+  <div class="page-header">
+    <div class="container">
+      <a href="index.html" class="back-link" style="color:rgba(255,255,255,.6)">
+        ← Continue Shopping
+      </a>
+      <h1>Shopping Cart</h1>
+      <p>Review your selected artworks before checkout.</p>
+    </div>
+  </div>
+
+  <!-- ── CART CONTENT ───────────────────────────────────────── -->
+  <main class="container">
+    <div class="cart-layout">
+
+      <!-- Left: Table -->
+      <div>
+        <!-- Empty state -->
+        <div id="cart-empty" style="display:none" class="hint-block" role="status">
+          <p style="font-size:2rem;margin-bottom:12px">🛒</p>
+          <p style="font-size:1.1rem;font-family:var(--font-disp)">Your cart is empty</p>
+          <p style="margin:10px 0 20px;color:var(--muted)">Explore our collection and add pieces you love.</p>
+          <a href="index.html" class="btn btn-primary">Browse Collection</a>
+        </div>
+
+        <!-- Cart table -->
+        <div id="cart-table-wrap" class="cart-table-wrap">
+          <table class="cart-table" aria-label="Cart items">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cart-body"></tbody>
+          </table>
+        </div>
+
+        <!-- Actions -->
+        <div id="cart-actions" style="display:none;margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <button id="clear-cart-btn" class="btn btn-outline">Clear Cart</button>
+          <a href="index.html" class="btn btn-outline">← Continue Shopping</a>
+        </div>
+      </div>
+
+      <!-- Right: Summary -->
+      <div class="summary-card" aria-label="Order summary">
+        <h3>Order Summary</h3>
+
+        <div class="summary-row">
+          <span>Items (<span id="summary-items">0</span>)</span>
+          <span id="summary-subtotal">₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span id="summary-shipping" style="color:#4CAF50;font-weight:500">Free</span>
+        </div>
+        <div class="summary-row summary-total">
+          <span>Total</span>
+          <span id="summary-total">₹0</span>
+        </div>
+
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
+          <button id="checkout-btn" class="btn btn-accent btn-full" style="font-size:1rem;padding:14px">
+            Proceed to Checkout →
+          </button>
+          <p style="font-size:.75rem;color:var(--muted);text-align:center">
+            Orders are confirmed via WhatsApp
+          </p>
+        </div>
+
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border)">
+          <p style="font-size:.78rem;color:var(--muted);line-height:1.7">
+            🚚 Free shipping on all orders<br>
+            🎨 Handmade &amp; carefully packed<br>
+            📦 Delivered in 5–7 business days
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2024 ArtStore — <a href="index.html">Home</a> | <a href="admin.html">Admin</a></p>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
